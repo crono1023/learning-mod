@@ -4,5 +4,7 @@
   "item.learningmod.mysterious_artifact": "Mysterious Artifact",
   "block.learningmod.learning_block": "Learning Block",
   "block.learningmod.black_gold": "Black Gold",
-  "item.learningmod.heart": "Learning Heart"
+  "item.learningmod.heart": "Learning Heart",
+  "item.learningmod.test_food": "Test Food",
+  "item.learningmod.tulip": "Tulip"
 }
