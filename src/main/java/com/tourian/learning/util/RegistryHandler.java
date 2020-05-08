@@ -26,19 +26,29 @@ public class RegistryHandler {
     }
 
 
+    //Initialize Objects
+
     // Items
-    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", ItemBase::new);
-    public static final RegistryObject<Item> MYSTERIOUS_ARTIFACT = ITEMS.register("mysterious_artifact", ItemBase::new);
+    public static final RegistryObject<Item> RUBY;
+    public static final RegistryObject<Item> MYSTERIOUS_ARTIFACT;
+    public static final RegistryObject<Item> HEART;
 
     // Blocks
-    public static final RegistryObject<Block> LEARNING_BLOCK = BLOCKS.register("learning_block", LearningBlock::new);
-    public static final RegistryObject<Block> BLACK_GOLD_BLOCK = BLOCKS.register("black_gold", BlackGold::new);
+    public static final RegistryObject<Block> LEARNING_BLOCK;
+    public static final RegistryObject<Block> BLACK_GOLD_BLOCK;
 
     // Block Items
     public static final RegistryObject<Item> LEARNING_BLOCK_ITEM;
     public static final RegistryObject<Item> BLACK_GOLD_ITEM;
 
+    // Instantiate objects
     static {
+        RUBY = ITEMS.register("ruby", ItemBase::new);
+        HEART = ITEMS.register("heart", ItemBase::new);
+        MYSTERIOUS_ARTIFACT = ITEMS.register("mysterious_artifact",
+                ItemBase::new);
+        BLACK_GOLD_BLOCK = BLOCKS.register("black_gold", BlackGold::new);
+        LEARNING_BLOCK = BLOCKS.register("learning_block", LearningBlock::new);
         LEARNING_BLOCK_ITEM = ITEMS.register("learning_block", () -> new BlockItemBase(LEARNING_BLOCK.get()));
         BLACK_GOLD_ITEM = ITEMS.register("black_gold", () -> new BlockItemBase(BLACK_GOLD_BLOCK.get()));
     }
