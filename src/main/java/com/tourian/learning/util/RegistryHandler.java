@@ -34,6 +34,7 @@ public class RegistryHandler {
     //Food
     public static final Food TEST_FOOD;
     public static final Food DONUT_FOOD;
+    public static final Food PRETZEL_FOOD;
 
     // Items
     public static final RegistryObject<Item> RUBY;
@@ -42,6 +43,7 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TEST_FOOD_ITEM;
     public static final RegistryObject<Item> TULIP;
     public static final RegistryObject<Item> DONUT_ITEM;
+    public static final RegistryObject<Item> PRETZEL_ITEM;
 
 
     // Blocks
@@ -58,10 +60,12 @@ public class RegistryHandler {
         // Instantiate food items
         TEST_FOOD = new Food.Builder().hunger(5).saturation(0.6f).build();
         DONUT_FOOD = new Food.Builder().hunger(8).saturation(0.3f).build();
+        PRETZEL_FOOD = new Food.Builder().hunger(8).saturation(0.4f).build();
 
         // Instantiate items
         TEST_FOOD_ITEM = ITEMS.register("test_food", () -> new ItemFoodBase(TEST_FOOD));
         DONUT_ITEM = ITEMS.register("donut", () -> new ItemFoodBase(DONUT_FOOD));
+        PRETZEL_ITEM = ITEMS.register("pretzel", () -> new ItemFoodBase(PRETZEL_FOOD));
         RUBY = ITEMS.register("ruby", ItemBase::new);
         HEART = ITEMS.register("heart", ItemBase::new);
         MYSTERIOUS_ARTIFACT = ITEMS.register("mysterious_artifact",
