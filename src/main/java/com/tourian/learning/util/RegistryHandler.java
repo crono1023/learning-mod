@@ -35,6 +35,9 @@ public class RegistryHandler {
     public static final Food TEST_FOOD;
     public static final Food DONUT_FOOD;
     public static final Food PRETZEL_FOOD;
+    public static final Food COOKED_HAMBURGER_PATTY;
+    public static final Food CHEESE;
+    public static final Food CHEESEBURGER;
 
     // Items
     public static final RegistryObject<Item> RUBY;
@@ -44,6 +47,12 @@ public class RegistryHandler {
     public static final RegistryObject<Item> TULIP;
     public static final RegistryObject<Item> DONUT_ITEM;
     public static final RegistryObject<Item> PRETZEL_ITEM;
+    public static final RegistryObject<Item> RAW_GROUND_BEEF;
+    public static final RegistryObject<Item> RAW_HAMBURGER_PATTY;
+    public static final RegistryObject<Item> COOKED_HAMBURGER_PATTY_ITEM;
+    public static final RegistryObject<Item> CHEESE_ITEM;
+    public static final RegistryObject<Item> CHEESEBURGER_ITEM;
+
 
 
     // Blocks
@@ -61,6 +70,9 @@ public class RegistryHandler {
         TEST_FOOD = new Food.Builder().hunger(5).saturation(0.6f).build();
         DONUT_FOOD = new Food.Builder().hunger(8).saturation(0.3f).build();
         PRETZEL_FOOD = new Food.Builder().hunger(8).saturation(0.4f).build();
+        COOKED_HAMBURGER_PATTY = new Food.Builder().hunger(8).saturation(0.8f).build();
+        CHEESE = new Food.Builder().hunger(3).saturation(0.3f).build();
+        CHEESEBURGER = new Food.Builder().hunger(10).saturation(1.0f).build();
 
         // Instantiate items
         TEST_FOOD_ITEM = ITEMS.register("test_food", () -> new ItemFoodBase(TEST_FOOD));
@@ -71,6 +83,11 @@ public class RegistryHandler {
         MYSTERIOUS_ARTIFACT = ITEMS.register("mysterious_artifact",
                 ItemBase::new);
         TULIP = ITEMS.register("tulip", ItemBase::new);
+        RAW_GROUND_BEEF = ITEMS.register("raw_ground_beef", ItemBase::new);
+        RAW_HAMBURGER_PATTY = ITEMS.register("raw_hamburger_patty", ItemBase::new);
+        COOKED_HAMBURGER_PATTY_ITEM = ITEMS.register("cooked_hamburger_patty", () -> new ItemFoodBase(COOKED_HAMBURGER_PATTY));
+        CHEESE_ITEM = ITEMS.register("cheese", () -> new ItemFoodBase(CHEESE));
+        CHEESEBURGER_ITEM = ITEMS.register("cheeseburger", () -> new ItemFoodBase(CHEESEBURGER));
 
 
         // Instantiate blocks (with their corresponding block items.

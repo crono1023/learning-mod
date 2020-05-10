@@ -8,5 +8,10 @@
   "item.learningmod.test_food": "Test Food",
   "item.learningmod.tulip": "Tulip",
   "item.learningmod.donut": "Donut",
-  "item.learningmod.pretzel": "Soft Pretzel"
+  "item.learningmod.pretzel": "Soft Pretzel",
+  "item.learningmod.raw_ground_beef": "Raw Ground Beef",
+  "item.learningmod.raw_hamburger_patty": "Raw Hamburger Patty",
+  "item.learningmod.cooked_hamburger_patty": "Cooked Hamburger Patty",
+  "item.learningmod.cheese": "Cheese",
+  "item.learningmod.cheeseburger": "Cheeseburger"
 }

@@ -1,0 +1,31 @@
+{
+  "parent": "minecraft:recipes/root",
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "minecraft:egg"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "learningmod:raw_ground_beef"
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "learningmod:raw_ground_beef"
+    ]
+  }
+}

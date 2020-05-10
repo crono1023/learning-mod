@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bbb"
+    ],
+  "key": {
+    "b": {
+      "item": "minecraft:beef"
+    }
+  },
+  "result": {
+    "item": "learningmod:raw_ground_beef"
+  }
+}

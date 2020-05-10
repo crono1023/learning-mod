@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "learningmod:raw_ground_beef"
+    }
+  ],
+  "result":
+  {
+    "item": "learningmod:raw_hamburger_patty"
+  }
+}
