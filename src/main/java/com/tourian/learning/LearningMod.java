@@ -2,9 +2,14 @@ package com.tourian.learning;
 
 import com.tourian.learning.util.RegistryHandler;
 import com.tourian.learning.world.ModWorldGen;
+import net.minecraft.block.BlockRenderType;
+import net.minecraft.client.renderer.BlockRendererDispatcher;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -60,6 +65,16 @@ public class LearningMod
         @SubscribeEvent
         public static void loadCompleteEvent(FMLLoadCompleteEvent event) {
             ModWorldGen.generateOre();
+        }
+
+        @SubscribeEvent
+        public static void FMLClientSetupEvent(FMLClientSetupEvent event) {
+            RenderTypeLookup.setRenderLayer(RegistryHandler.TEST_CROP.get(), RenderType.getCutout());
+        }
+
+        @SubscribeEvent
+        public static void onBoneMealEvent(BonemealEvent event) {
+            System.out.println("Bonemealing stuff");
         }
     }
 }

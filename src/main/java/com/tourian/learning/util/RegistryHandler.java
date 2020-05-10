@@ -4,9 +4,14 @@ import com.tourian.learning.LearningMod;
 import com.tourian.learning.block.BlackGold;
 import com.tourian.learning.block.BlockItemBase;
 import com.tourian.learning.block.LearningBlock;
+import com.tourian.learning.block.LearningCropsBlock;
 import com.tourian.learning.items.ItemBase;
 import com.tourian.learning.items.ItemFoodBase;
 import net.minecraft.block.Block;
+import net.minecraft.block.CropsBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockNamedItem;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -15,6 +20,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.tourian.learning.LearningMod.MOD_ID;
+import static com.tourian.learning.LearningMod.TAB;
 
 public class RegistryHandler {
 
@@ -52,12 +58,15 @@ public class RegistryHandler {
     public static final RegistryObject<Item> COOKED_HAMBURGER_PATTY_ITEM;
     public static final RegistryObject<Item> CHEESE_ITEM;
     public static final RegistryObject<Item> CHEESEBURGER_ITEM;
+    public static final RegistryObject<Item> TEST_SEEDS;
+    public static final RegistryObject<Item> NOT_WHEAT;
 
 
 
     // Blocks
     public static final RegistryObject<Block> LEARNING_BLOCK;
     public static final RegistryObject<Block> BLACK_GOLD_BLOCK;
+    public static final RegistryObject<Block> TEST_CROP;
 
     // Block Items
     public static final RegistryObject<Item> LEARNING_BLOCK_ITEM;
@@ -88,6 +97,7 @@ public class RegistryHandler {
         COOKED_HAMBURGER_PATTY_ITEM = ITEMS.register("cooked_hamburger_patty", () -> new ItemFoodBase(COOKED_HAMBURGER_PATTY));
         CHEESE_ITEM = ITEMS.register("cheese", () -> new ItemFoodBase(CHEESE));
         CHEESEBURGER_ITEM = ITEMS.register("cheeseburger", () -> new ItemFoodBase(CHEESEBURGER));
+        NOT_WHEAT = ITEMS.register("test_crop", ItemBase::new);
 
 
         // Instantiate blocks (with their corresponding block items.
@@ -95,6 +105,11 @@ public class RegistryHandler {
         LEARNING_BLOCK = BLOCKS.register("learning_block", LearningBlock::new);
         LEARNING_BLOCK_ITEM = ITEMS.register("learning_block", () -> new BlockItemBase(LEARNING_BLOCK.get()));
         BLACK_GOLD_ITEM = ITEMS.register("black_gold", () -> new BlockItemBase(BLACK_GOLD_BLOCK.get()));
+
+        // Test Crop
+        TEST_CROP = BLOCKS.register("test_crop", () -> new LearningCropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP)));
+
+        TEST_SEEDS = ITEMS.register("test_seeds", () -> new BlockNamedItem(TEST_CROP.get(), (new Item.Properties()).group(TAB)));
     }
 
 

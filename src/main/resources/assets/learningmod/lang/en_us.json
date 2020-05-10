@@ -13,5 +13,7 @@
   "item.learningmod.raw_hamburger_patty": "Raw Hamburger Patty",
   "item.learningmod.cooked_hamburger_patty": "Cooked Hamburger Patty",
   "item.learningmod.cheese": "Cheese",
-  "item.learningmod.cheeseburger": "Cheeseburger"
+  "item.learningmod.cheeseburger": "Cheeseburger",
+  "item.learningmod.test_crop" : "Test Wheat",
+  "item.learningmod.test_seeds": "Test Seeds"
 }
