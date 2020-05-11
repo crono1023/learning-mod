@@ -12,17 +12,17 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "learningmod:test_crop",
+                  "block": "learningmod:tomato",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "learningmod:test_crop"
+              "name": "learningmod:tomato"
             },
             {
               "type": "minecraft:item",
-              "name": "learningmod:test_seeds"
+              "name": "learningmod:tomato_seeds"
             }
           ]
         }
@@ -44,13 +44,13 @@
               }
             }
           ],
-          "name": "learningmod:test_seeds"
+          "name": "learningmod:tomato_seeds"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "learningmod:test_crop",
+          "block": "learningmod:tomato",
           "properties": {
             "age": "7"
           }

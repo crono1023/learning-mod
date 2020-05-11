@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "crop": "learningmod:blocks/test_crop_stage3"
+    "crop": "learningmod:blocks/tomato_stage5"
   }
 }

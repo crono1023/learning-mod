@@ -58,15 +58,15 @@ public class RegistryHandler {
     public static final RegistryObject<Item> COOKED_HAMBURGER_PATTY_ITEM;
     public static final RegistryObject<Item> CHEESE_ITEM;
     public static final RegistryObject<Item> CHEESEBURGER_ITEM;
-    public static final RegistryObject<Item> TEST_SEEDS;
-    public static final RegistryObject<Item> NOT_WHEAT;
+    public static final RegistryObject<Item> TOMATO_SEEDS;
+    public static final RegistryObject<Item> TOMATO;
 
 
 
     // Blocks
     public static final RegistryObject<Block> LEARNING_BLOCK;
     public static final RegistryObject<Block> BLACK_GOLD_BLOCK;
-    public static final RegistryObject<Block> TEST_CROP;
+    public static final RegistryObject<Block> TOMATO_CROP;
 
     // Block Items
     public static final RegistryObject<Item> LEARNING_BLOCK_ITEM;
@@ -97,7 +97,7 @@ public class RegistryHandler {
         COOKED_HAMBURGER_PATTY_ITEM = ITEMS.register("cooked_hamburger_patty", () -> new ItemFoodBase(COOKED_HAMBURGER_PATTY));
         CHEESE_ITEM = ITEMS.register("cheese", () -> new ItemFoodBase(CHEESE));
         CHEESEBURGER_ITEM = ITEMS.register("cheeseburger", () -> new ItemFoodBase(CHEESEBURGER));
-        NOT_WHEAT = ITEMS.register("test_crop", ItemBase::new);
+        TOMATO = ITEMS.register("tomato", ItemBase::new);
 
 
         // Instantiate blocks (with their corresponding block items.
@@ -107,9 +107,9 @@ public class RegistryHandler {
         BLACK_GOLD_ITEM = ITEMS.register("black_gold", () -> new BlockItemBase(BLACK_GOLD_BLOCK.get()));
 
         // Test Crop
-        TEST_CROP = BLOCKS.register("test_crop", () -> new LearningCropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP)));
+        TOMATO_CROP = BLOCKS.register("tomato", () -> new LearningCropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP)));
 
-        TEST_SEEDS = ITEMS.register("test_seeds", () -> new BlockNamedItem(TEST_CROP.get(), (new Item.Properties()).group(TAB)));
+        TOMATO_SEEDS = ITEMS.register("tomato_seeds", () -> new BlockNamedItem(TOMATO_CROP.get(), (new Item.Properties()).group(TAB)));
     }
 
 

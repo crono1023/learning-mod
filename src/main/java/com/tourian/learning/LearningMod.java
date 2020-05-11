@@ -69,7 +69,7 @@ public class LearningMod
 
         @SubscribeEvent
         public static void FMLClientSetupEvent(FMLClientSetupEvent event) {
-            RenderTypeLookup.setRenderLayer(RegistryHandler.TEST_CROP.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(RegistryHandler.TOMATO_CROP.get(), RenderType.getCutout());
         }
 
         @SubscribeEvent
