@@ -24,6 +24,7 @@ public class ModWorldGen {
         for (Biome biome : ForgeRegistries.BIOMES) {
             ConfiguredPlacement<CountRangeConfig> customConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(10, 0, 0, 80));
             biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.BLACK_GOLD_BLOCK.get().getDefaultState(), 33)).withPlacement(customConfig));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, RegistryHandler.LEARNING_BLOCK.get().getDefaultState(), 33)).withPlacement(customConfig));
         }
 
     }

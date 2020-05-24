@@ -15,5 +15,7 @@
   "item.learningmod.cheese": "Cheese",
   "item.learningmod.cheeseburger": "Cheeseburger",
   "item.learningmod.tomato" : "Tomato",
-  "item.learningmod.tomato_seeds": "Tomato Seeds"
+  "item.learningmod.tomato_seeds": "Tomato Seeds",
+  "item.learningmod.example_item": "Example Item",
+  "item.learningmod.x_x": "x_x"
 }

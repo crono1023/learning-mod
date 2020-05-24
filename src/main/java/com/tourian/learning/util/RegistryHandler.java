@@ -18,6 +18,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.system.CallbackI;
 
 import static com.tourian.learning.LearningMod.MOD_ID;
 import static com.tourian.learning.LearningMod.TAB;
@@ -60,6 +61,8 @@ public class RegistryHandler {
     public static final RegistryObject<Item> CHEESEBURGER_ITEM;
     public static final RegistryObject<Item> TOMATO_SEEDS;
     public static final RegistryObject<Item> TOMATO;
+    public static final RegistryObject<Item> EXAMPLE_ITEM;
+    public static final RegistryObject<Item> X_X;
 
 
 
@@ -98,7 +101,8 @@ public class RegistryHandler {
         CHEESE_ITEM = ITEMS.register("cheese", () -> new ItemFoodBase(CHEESE));
         CHEESEBURGER_ITEM = ITEMS.register("cheeseburger", () -> new ItemFoodBase(CHEESEBURGER));
         TOMATO = ITEMS.register("tomato", ItemBase::new);
-
+        EXAMPLE_ITEM = ITEMS.register("example_item", ItemBase::new);
+        X_X = ITEMS.register("x_x",ItemBase::new);
 
         // Instantiate blocks (with their corresponding block items.
         BLACK_GOLD_BLOCK = BLOCKS.register("black_gold", BlackGold::new);
